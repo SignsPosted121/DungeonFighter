@@ -1,5 +1,6 @@
 # About This Project
 Probably one of my first projects in Unity. I developed the game for Android, and I worked on this game from 2017-2018 (when I was 15 until I was 16). It had a somewhat successful run on the android store, reaching a little over 100 free installs. I implemented ads, but at the time Slay the Spire had been released and I lost a lot of heart working on this beauty.
+### Editor's Note: This game was intended to be play in PORTRAIT mode on a mobile device. It will look strange on landscape mode for PC.
 
 # Highlights
 * Combat: The combat in this game was card based, drawn at random and you could use action points to make attacks. Each attack had different effects, target types, and stat buffs.
