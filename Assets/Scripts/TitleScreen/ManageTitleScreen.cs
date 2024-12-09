@@ -13,6 +13,7 @@ public class ManageTitleScreen : MonoBehaviour {
 
 	private bool Loading = false;
 
+	/*
 	private IEnumerator ShowAdWhenReady()
 	{
 		while (!Advertisement.IsReady("StartAdvertisement"))
@@ -22,6 +23,7 @@ public class ManageTitleScreen : MonoBehaviour {
 
 		Advertisement.Show ("StartAdvertisement");
 	}
+	*/
 
 	IEnumerator PlayGame () {
 		if (Loading == false)
@@ -46,8 +48,8 @@ public class ManageTitleScreen : MonoBehaviour {
 
 	void Start ()
 	{
-		Advertisement.Initialize("3019218", false);
-		StartCoroutine(ShowAdWhenReady());
+		//Advertisement.Initialize("3019218", false);
+		//StartCoroutine(ShowAdWhenReady());
 		Highscore.text = "Highscore: " + PlayerPrefs.GetInt ("BETA_Highscore");
 		EndlessMode.GetComponent <Button> ().onClick.AddListener (() => StartCoroutine (PlayGame ()));
 	}

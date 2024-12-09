@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
+// ABANDON ALL FAITH, YE WHO ENTER HERE!!!
+
 public class FightManager : MonoBehaviour {
 
 	public Transform Music;
@@ -535,7 +537,7 @@ public class FightManager : MonoBehaviour {
 		gameObject.GetComponent <PlayerStats> ().FloorCount += 1;
 		PlayerPrefs.SetInt ("BETA_TotalCrossbowHighscore", PlayerPrefs.GetInt ("BETA_TotalCrossbowHighscore") + 1);
 		if (PlayerPrefs.GetInt ("BETA_TotalCrossbowHighscore") >= 25) {
-			StartCoroutine(ShowAdWhenReady("StartAdvertisement"));
+			//StartCoroutine(ShowAdWhenReady("StartAdvertisement"));
 			Choices.Clear ();
 			PlayerPrefs.SetInt ("BETA_TotalCrossbowHighscore", PlayerPrefs.GetInt ("BETA_TotalCrossbowHighscore") - 25);
 			Transform Inventory = gameObject.GetComponent <PlayerStats> ().Inventory.GetComponent <InventoryManager> ().Crossbows;
@@ -689,6 +691,7 @@ public class FightManager : MonoBehaviour {
 		ShownAd = false;
 	}
 
+	/*
 	private IEnumerator ShowAdWhenReady(string Advert)
 	{
 		while (!Advertisement.IsReady(Advert))
@@ -699,6 +702,7 @@ public class FightManager : MonoBehaviour {
 		Advertisement.Show(Advert);
 		ShownAd = false;
 	}
+	*/
 
 	void Start ()
 	{
@@ -879,7 +883,7 @@ public class FightManager : MonoBehaviour {
 			}
 			if (!ShownAd)
 			{
-				StartCoroutine(ShowAdWhenReady("OnDeathAdvertisement"));
+				//StartCoroutine(ShowAdWhenReady("OnDeathAdvertisement"));
 				ShownAd = true;
 			}
 			SaveScript.SaveGame();
